@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body
+    style="padding: 0; margin: 0; position: fixed; height: 100vh; width: 100vw"
+  >
+    <div id="pspdfkit" style="width: 100%; height: 100vh"></div>
+    <script src="dist/pspdfkit.js"></script>
+    <script>
+      PSPDFKit.load({
+        container: "#pspdfkit",
+        document: "ASSR-Accounting-for-Leases-under-ASC842-FINAL.pdf",
+        theme: PSPDFKit.Theme.DARK,
+      })
+        .then(function (instance) {
+          console.log("PSPDFKit loaded", instance);
+        })
+        .catch(function (error) {
+          console.error(error.message);
+        });
+    </script>
+  </body>
+</html>
