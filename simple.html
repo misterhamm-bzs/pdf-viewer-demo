@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BDO ARCH | Example Blueprint</title>
+  </head>
+  <body style="padding: 0; margin: 0; min-height: 100vh">
+    <img src="header.png" style="width: 100%" />
+
+    <div id="pspdfkit" style="width: 100%; height: 100vh"></div>
+    <div style="display: flex; justify-content: center; background-color: #333">
+      <img src="footer.png" style="width: 100%; max-width: 1320px" alt="" />
+    </div>
+    <script src="dist/pspdfkit.js"></script>
+    <script>
+      PSPDFKit.load({
+        container: "#pspdfkit",
+        document: "document.pdf",
+        theme: PSPDFKit.Theme.DARK,
+      })
+        .then(function (instance) {
+          console.log("PSPDFKit loaded", instance);
+        })
+        .catch(function (error) {
+          console.error(error.message);
+        });
+    </script>
+  </body>
+</html>
