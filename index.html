@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body
-    style="padding: 0; margin: 0; position: fixed; height: 100vh; width: 100vw"
-  >
+  <body style="padding: 0; margin: 0; min-height: 100vh">
+    <img src="header.png" style="width: 100%" />
+
     <div id="pspdfkit" style="width: 100%; height: 100vh"></div>
+    <div style="display: flex; justify-content: center; background-color: #333">
+      <img src="footer.png" style="width: 100%; max-width: 1320px" alt="" />
+    </div>
     <script src="dist/pspdfkit.js"></script>
     <script>
       PSPDFKit.load({
